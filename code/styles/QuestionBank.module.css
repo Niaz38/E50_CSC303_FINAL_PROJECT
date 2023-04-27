@@ -1,0 +1,309 @@
+/* add navbar style */
+.nav {
+    height: 50px;
+    padding: 10px;
+    /* background-color: #333; */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 500px;
+}
+
+.nav ul li a {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: rgb(252, 252, 252);
+    /* background-color: rgba(255, 255, 255, 0.134); */
+    /* border: 1px solid rgb(131, 131, 131); */
+    /* padding: 8px; */
+    margin: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+
+
+}
+
+.nav ul li a:hover {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: rgba(219, 219, 219, 0.986);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+
+}
+
+.colorRed {
+    color: rgb(248, 56, 22);
+}
+
+.colorGreen {
+    color: rgb(1, 187, 41);
+}
+
+.rightAlign {
+    margin-left: auto;
+    justify-content: flex-end;
+}
+
+.loginContainer {
+    font-size: 1.2rem;
+    padding: 5px;
+    margin: 5px;
+    /* border: 1px solid #858585; */
+    /* background-color: rgba(255, 255, 255, 0.134); */
+    background-color: rgba(125, 125, 125, 0.327);
+    color: rgb(251, 251, 251);
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+}
+
+.loginContainer:hover {
+    font-size: 1.2rem;
+    padding: 5px;
+    margin: 5px;
+    text-decoration: none;
+    color: rgb(10, 10, 10);
+    background-color: rgba(219, 219, 219, 0.986);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+}
+
+.card {
+    margin: 1rem;
+    padding: 1.5rem;
+    text-align: left;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    max-width: 300px;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+    color: #0070f3;
+    border-color: #0070f3;
+}
+
+.card h2 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+}
+
+.card p {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.qcard {
+    margin: 1rem;
+    padding: 1.5rem;
+    text-align: left;
+    color: black;
+    background-color: white;
+    border: 1px solid #eaeaea;
+    text-decoration: none;
+    /* border-radius: 10px; */
+    transition: color 0.15s ease, border-color 0.15s ease;
+    max-width: 1400px;
+    min-width: 800px;
+
+    /* min-width: 1vw; */
+}
+
+.innerBorder {
+    border: 1px solid #2d2d2d;
+    margin: 10px;
+    padding: 10px;
+    min-height: 600px;
+    min-width: 900px;
+    /* border-radius: 10px; */
+    transition: color 0.15s ease, border-color 0.15s ease;
+    align-items: center;
+
+}
+
+.qcard:hover,
+.qcard:focus,
+.qcard:active {
+    color: #020202;
+    background-color: #ffffff;
+    box-shadow: #ffffff 0px 0px 5px 0px;
+    /* margin: 1.5rem; */
+    /* border: 5px solid #ffffff; */
+}
+
+.qcard h2 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+}
+
+.qcard p {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.topCard {
+    margin: 1rem;
+    padding: 1.5rem;
+    font-size: 2.5rem;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    max-width: 1400px;
+    background-color: rgba(125, 125, 125, 0.327);
+    backdrop-filter: blur(10px);
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.largeFont {
+    font-size: 2.5rem;
+}
+
+.alignRight {
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/*  form container */
+
+.formContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60%;
+
+}
+
+.courseField {
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    color: rgb(251, 251, 251);
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.QuestionField {
+    margin: 1rem;
+    padding: 1rem;
+    /* display: flex; */
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    color: rgb(251, 251, 251);
+    border: #f5f5f5 solid 1px;
+    /* box-shadow: #e8e8e8 0px 0px 2px 2px; */
+    font-size: 1.2rem;
+    width: 100%;
+}
+
+.question {
+    margin: 1rem 2rem;
+    margin-left: 0px;
+    padding: 1rem;
+    /* display: flex; */
+    align-items: flex-start;
+    justify-content: left;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    color: rgb(251, 251, 251);
+    border: #e8e8e8 solid 1px;
+    font-size: 1.2rem;
+    width: 100%;
+    height: 200px;
+}
+
+.questionItem {
+    display: flex;
+    margin: 1rem;
+    margin-left: 0px;
+    margin-left: 0px;
+    padding: 1rem;
+    text-align: left;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    width: 100%;
+}
+
+.formItem {
+    display: flex;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: left;
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    transition: color 0.15s ease, border-color 0.15s ease;
+    width: 100%;
+}
+
+.formButton {
+    display: flex;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    color: rgb(251, 251, 251);
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    width: 40%;
+}
+
+.formButton:hover {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+    background-color: rgba(219, 219, 219, 0.986);
+    transition: all 0.3s ease;
+}
+
+.prismaAdd {
+    /* display: flex; */
+    border: none;
+    height: 100vh;
+    width: 100vw;
+}

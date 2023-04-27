@@ -1,0 +1,107 @@
+/* add navbar style */
+.nav {
+    height: 60px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav ul li a {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: rgb(252, 252, 252);
+    /* background-color: rgba(255, 255, 255, 0.134); */
+    /* border: 1px solid rgb(131, 131, 131); */
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+
+}
+
+.nav ul li a:hover {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    background-color: rgba(219, 219, 219, 0.986);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+
+}
+
+.colorRed {
+    color: rgb(248, 56, 22);
+}
+
+.colorGreen {
+    color: #05f480;
+}
+
+.colorGreen:hover {
+    color: #020202;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0px;
+}
+
+.rightAlign {
+    margin-left: auto;
+    justify-content: flex-end;
+}
+
+.active {
+    background-color: rgb(127, 125, 125);
+    color: #05f480 !important;
+    padding: 0px;
+    margin: 0px;
+    /* border-radius: 5px; */
+    /* transition: all 0.2s ease; */
+}
+
+.active:hover {
+    background-color: rgb(87, 87, 87);
+    color: #0f0f0f !important;
+    padding: 0px;
+    margin: 0px;
+    /* border-radius: 5px; */
+    /* transition: all 0.2s ease; */
+}
+
+.titleLogo {
+    /* margin-left: 10px; */
+    /* font-size: 1.5rem; */
+    font-weight: 600;
+    color: #05f480;
+    /* background-color: #333; */
+    text-decoration: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.message {
+    font-size: 2rem;
+    color: white;
+}
