@@ -1,0 +1,141 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+// npx prisma studio
+// npx prisma migrate dev --name init
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model QuestionPaper {
+  id        Int        @id @default(autoincrement())
+  uniqueId  String     @unique
+  course_id String
+  semester  String
+  section   Int
+  question  Question[]
+
+  @@map(name: "questionpaper")
+}
+
+model Question {
+  id       Int           @id @default(autoincrement())
+  uniqueId String
+  question String
+  marks    Int
+  co       Int
+  paper    QuestionPaper @relation(fields: [uniqueId], references: [uniqueId])
+
+  @@map(name: "question")
+}
+
+model ObeStudent {
+  student_id    String @id @default(uuid())
+  student_name  String @default("No Name")
+  courseID      String @default("CS-101")
+  section       Int    @default(1)
+  semester      String @default("Fall")
+  total         Int    @default(0)
+  CO1           Int    @default(0)
+  CO2           Int    @default(0)
+  CO3           Int    @default(0)
+  CO4           Int    @default(0)
+  grade         String @default("F")
+  educationYear Int    @default(2023)
+
+  @@map(name: "obestudent")
+}
+
+model CourseOutline {
+  id         Int          @id @default(autoincrement())
+  course     Course[]
+  faculty    Faculty[]
+  objectives Objectives[]
+  policy     Policy[]
+  outcome    Outcome[]
+  schedule   Schedule[]
+  resource   Resource[]
+
+  @@map(name: "courseoutline")
+}
+
+model Course {
+  id              Int            @id @default(autoincrement())
+  courseCode      String
+  semester        String
+  section         Int
+  courseTitle     String
+  marks           Int
+  CourseOutline   CourseOutline? @relation(fields: [courseOutlineId], references: [id])
+  courseOutlineId Int?
+
+  @@map(name: "course")
+}
+
+model Faculty {
+  id              Int            @id @default(autoincrement())
+  name            String
+  designation     String
+  department      String
+  email           String
+  CourseOutline   CourseOutline? @relation(fields: [courseOutlineId], references: [id])
+  courseOutlineId Int?
+
+  @@map(name: "faculty")
+}
+
+model Objectives {
+  id              Int            @id @default(autoincrement())
+  objective       String
+  CourseOutline   CourseOutline? @relation(fields: [courseOutlineId], references: [id])
+  courseOutlineId Int?
+
+  @@map(name: "objectives")
+}
+
+model Policy {
+  id              Int            @id @default(autoincrement())
+  policy          String
+  CourseOutline   CourseOutline? @relation(fields: [courseOutlineId], references: [id])
+  courseOutlineId Int?
+
+  @@map(name: "policy")
+}
+
+model Outcome {
+  id              Int            @id @default(autoincrement())
+  outcome         String
+  CourseOutline   CourseOutline? @relation(fields: [courseOutlineId], references: [id])
+  courseOutlineId Int?
+
+  @@map(name: "outcome")
+}
+
+model Schedule {
+  id              Int            @id @default(autoincrement())
+  week            String
+  topic           String
+  readings        String
+  CourseOutline   CourseOutline? @relation(fields: [courseOutlineId], references: [id])
+  courseOutlineId Int?
+
+  @@map(name: "schedule")
+}
+
+model Resource {
+  id              Int            @id @default(autoincrement())
+  title           String
+  CourseOutline   CourseOutline? @relation(fields: [courseOutlineId], references: [id])
+  courseOutlineId Int?
+
+  @@map(name: "resource")
+}
+
+// generator erd {
+//   provider = "prisma-erd-generator"
+//   output   = "../ERD.md" 
+// }
