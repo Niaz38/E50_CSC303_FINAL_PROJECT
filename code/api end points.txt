@@ -1,0 +1,5 @@
+All question papers : http://localhost:3000/api/questionpaper
+Specific question paper : http://localhost:3000/api/questionpaper/coursename/semester/section
+Current logged in user : http://localhost:3000/api/currentuser
+All student list : http://localhost:3000/api/student
+Specific student : http://localhost:3000/api/student/studentId
